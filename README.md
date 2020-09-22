@@ -18,7 +18,7 @@
 ## Description
 
 <p align="center">
-<img src="images/5yrbond.png" width="550" height="350">
+<img src="images/5yrbond.png" width="650" height="350">
 <p/>
 
 Over the past 20 years interest rates have fallen precipitously with the 5 year US treasury yield currently at 0.29%. With debt obligations projected to reach many multiples of GDP, it is unlikely governments will return to higher interest rates in order to be able to service their massive debts. As a result, individuals and institutional investors alike are desperately seeking alternative safe investment opportunities to generate returns. The appeal of peer-to-peer lending has surged as it allows investors to chase higher yields while mitigating their risk profiles.   
@@ -94,8 +94,7 @@ Three models were tested on each of the loan grades: Logistic Regression, Gradie
 
 I wanted to see if there were other ideas in order to improve returns. I originally hypothesized that lower graded loans payouts during defaults would be skewed to the left as borrowers with lower grade may have higher risk of fraud. However, I noticed no matter the loan grade, payout rates folowed a normal distribution. This posited the idea that all borrowers try to follow through with their loans but unforseen consequences causes them to default. This gave me the idea to view the success or failure of a loan through the lens of cashflow security which the biggest influence being job security. This disproved my originally thinking and I began to consider ways to measure job security through data. 
 
-[A B
-C D] 
+[How much borrowers paid before defaulting A B C D ] 
 <p align="center">
 <img src="images/Adefault.png" width="350" height="350">
 <img src="images/Bdefault.png" width="350" height="350">
