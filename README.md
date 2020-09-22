@@ -33,27 +33,27 @@ LendingClub is the first and largest SEC registered peer-to-peer lending platfor
 
 The data consisted of 1,816,217 loans (1GB) from LendingClub's website. 39 features were extracted from the data provided for each loan, a few of the features are provided as an example below:
 
-Issue year: (Numerical) Year loan was issued
-Grade: (Categorical) Lending Club grade assigned to the loan
-Subgrade: (Categorical) Lending Club sub-grade assigned to the loan
-Job Title: (Text) Job title written by user
-Funded amount: (Numerical) Loan amount funded
-Term: (Categorical) Term length of loan, can only take on values of either 36 months or 60 months
-Purpose: (Categorical) Purpose of the loan, includes credit card consolidation, deb
-Application type: (Categorical) Type of application, can take on either Individual or Joint Application
-FICO: (Numerical) FICO score of borrower, created by averaging the low and high range of the borrower's FICO scores
-DTI: (Numerical) Debt to Income Ratio of the borrower based on the monthly debt payments charged to the borrower versus - monthly income
-Annual income: (Numerical) Annual salary of borrower
-Employment length: (Numerical) Years in current role
-Home ownership: (Categorical) Indicates whether a borrower owns a home, is paying off a mortgage, rents or has some other living situation
-Address state: (Categorical) Indicates state the borrower is applying from
-Earliest credit line: (Numerical) The earliest year the borrower had a credit line
-Negative activity: (Numerical) Combination of counts of public record bankruptcies and other credit adverse events
-Inquiries within the last 6 months: (Numerical) Count of times borrower's credit report was inquired upon within the last 6 months
-Delinquencies within the last 6 months: (Numerical) Count of delinquencies within the last 6 months
-Open accounts: (Numerical) Count of open accounts the borrower has
-Total Current Balance: (Numerical) Total outstanding credit of borrower
-Loan Status: (Categorical) Indicates whether loan was Fully Paid or Charged-Off
+* Issue year: (Numerical) Year loan was issued
+* Grade: (Categorical) Lending Club grade assigned to the loan
+* Subgrade: (Categorical) Lending Club sub-grade assigned to the loan
+* Job Title: (Text) Job title written by user
+* Funded amount: (Numerical) Loan amount funded
+* Term: (Categorical) Term length of loan, can only take on values of either 36 months or 60 months
+* Purpose: (Categorical) Purpose of the loan, includes credit card consolidation, deb
+* Application type: (Categorical) Type of application, can take on either Individual or Joint Application
+* FICO: (Numerical) FICO score of borrower, created by averaging the low and high range of the borrower's FICO scores
+* DTI: (Numerical) Debt to Income Ratio of the borrower based on the monthly debt payments charged to the borrower versus - monthly income
+* Annual income: (Numerical) Annual salary of borrower
+* Employment length: (Numerical) Years in current role
+* Home ownership: (Categorical) Indicates whether a borrower owns a home, is paying off a mortgage, rents or has some other living situation
+* Address state: (Categorical) Indicates state the borrower is applying from
+* Earliest credit line: (Numerical) The earliest year the borrower had a credit line
+* Negative activity: (Numerical) Combination of counts of public record bankruptcies and other credit adverse events
+* Inquiries within the last 6 months: (Numerical) Count of times borrower's credit report was inquired upon within the last 6 months
+* Delinquencies within the last 6 months: (Numerical) Count of delinquencies within the last 6 months
+* Open accounts: (Numerical) Count of open accounts the borrower has
+* Total Current Balance: (Numerical) Total outstanding credit of borrower
+* Loan Status: (Categorical) Indicates whether loan was Fully Paid or Charged-Off
 
 I was very careful to ensure the features used did not cause bias towards predicting if a loan was successful or not. For example, for loans that defaulted I noticed a metric on most recent credit score would fall drastically. Mostly likely the credit score would fall due to default on the current loan in question. This metric was not used in the model as it contain a lagging indicator that would not be present upon origination of a loan.
 
