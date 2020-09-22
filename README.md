@@ -1,27 +1,25 @@
 # Lending-Club
 
-
-# Semantic Topic Analysis
 ![](images/Front_.png)
 
 > Project Goals:
-- Deploy an NLP model to predict High and Low ratings based on user reviews.
-- Use NMF and TSNE to obtain insights into user reviews and present visualizations of data.
+- Create a loan success and default prediction model. 
+- Compare returns of built model with loan grade aggregates. 
 ---
 
 ### Table of Contents
 - [Description](#description)
 - [Data Understanding](#data-understanding)
-- [Data Preparation and NLP Prediction](#data-preparation-and-NLP-prediction)
-- [NMF Topic Analysis](#NMF-Topic-Analysis)
+- [Model Prediction and Job Title Analysis](#data-preparation-and-NLP-prediction)
+- [Model Returns](#NMF-Topic-Analysis)
 - [Author-Info](#author-info)
 
 ---
 ## Description
 
-Amazon's superior supply chain logistics, focus on technology, and online capabilities have allowed it to capture roughly 50% of the ecommerce market with over 1/3 of Americans having an Amazon Prime Membership. With such diverse and charismatic product offerings, competition is fierce among sellers as whoever maintains the best product will be funnelled immense sales through Amazon's search algorhythm. Therefore, maintaining a high rating is of utmost importance and adapting a product to consumer feedback can mean success or failure for a product. However, this consumer feedback can sometimes be lost among the hundreds of millions of reviews on amazon. 
+Over the past 20 years interest rates have fallen precipitously with the 5 year US treasury yield at 0.29%. With debt obligations projected to reach many multiples of GDP, it is unlikely governments will return to higher interest rates in order to be able to service their massive debts. As a result, individuals and institutional investors alike are desperately seeking alternative safe investment opportunities to generate returns. The appeal of peer-to-peer lending has surged as it allows investors to chase higher yields while mitigating their risk profiles.   
 
-This project seeks to develop an NLP model to classify and predict customer sentiment. More importantly, it seeks to utilize semi-supervised machine learning in the form of NMF and TSNE in order to further interpret text data to obtain product specific insights from reviews. This can be used to gain an edge over competiting products as it would allow real-time monitoring of product reviews and faster product adaptation to positive and negative customer feedback.    
+LendingClub is the first and largest SEC registered peer-to-peer lending platform that allows borrowers to create unsecured personal loans for investors to fund. LendingClub operates by approving loan applicants, assigning a risk grade to each loan (A-G), and then packages the loan for funding by outside investors. While safer than the volitile nature of stocks, peer-to-peer loans still carry an inherent level of risk directly related to the security of the future cashflow of the borrower. This project seeks to dive deeper into quantifying the inherent risk of each personal loan in order to build a machine learning model that can predict whether a loan will be successfully paid or not. The success metric of this project can be easily determined by comparing portfolio returns of the risk grade aggregate and the portfolio arising from the model's prediction. 
 
 [Back To The Top](#Semantic-Topic-Analysis)
 
@@ -29,12 +27,28 @@ This project seeks to develop an NLP model to classify and predict customer sent
 
 ## Data Understanding
 
-The data consisted of 574,628 reviews (75MB json.gz) from Amazon's luxury beauty market between 2014 - 2018. I chose the luxury beauty category due to having the highest ratio of reviews to product (45 reviews/product) with the next closest product category being video games (31 reviews/product). Each review consisted of the following data:
+The data consisted of 1,816,217 loans (1GB) from LendingClub's website. 39 features were extracted from the data provided for each loan, a few of the features are provided as an example below:
 
-1. Overall Rating: 1-5 stars.
-2. Number of Upvotes: # of other users who upvoted review.
-3. Review Text: Text of the review. 
-4. Product ASIN: Specific product ID number. 
+Issue year: (Numerical) Year loan was issued
+Grade: (Categorical) Lending Club grade assigned to the loan
+Subgrade: (Categorical) Lending Club sub-grade assigned to the loan
+Funded amount: (Numerical) Loan amount funded
+Term: (Categorical) Term length of loan, can only take on values of either 36 months or 60 months
+Purpose: (Categorical) Purpose of the loan, includes credit card consolidation, deb
+Application type: (Categorical) Type of application, can take on either Individual or Joint Application
+FICO: (Numerical) FICO score of borrower, created by averaging the low and high range of the borrower's FICO scores
+DTI: (Numerical) Debt to Income Ratio of the borrower based on the monthly debt payments charged to the borrower versus - monthly income
+Annual income: (Numerical) Annual salary of borrower
+Employment length: (Numerical) Years in current role
+Home ownership: (Categorical) Indicates whether a borrower owns a home, is paying off a mortgage, rents or has some other living situation
+Address state: (Categorical) Indicates state the borrower is applying from
+Earliest credit line: (Numerical) The earliest year the borrower had a credit line
+Negative activity: (Numerical) Combination of counts of public record bankruptcies and other credit adverse events
+Inquiries within the last 6 months: (Numerical) Count of times borrower's credit report was inquired upon within the last 6 months
+Delinquencies within the last 6 months: (Numerical) Count of delinquencies within the last 6 months
+Open accounts: (Numerical) Count of open accounts the borrower has
+Total Current Balance: (Numerical) Total outstanding credit of borrower
+Loan Status: (Categorical) Indicates whether loan was Fully Paid or Charged-Off
 
 <p align="center">
 <img src="images/data_overview.png" width="600" height="400">
