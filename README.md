@@ -18,7 +18,7 @@
 ## Description
 
 <p align="center">
-<img src="images/5yrbond.png" width="350" height="450">
+<img src="images/5yrbond.png" width="450" height="350">
 <p/>
 
 Over the past 20 years interest rates have fallen precipitously with the 5 year US treasury yield currently at 0.29%. With debt obligations projected to reach many multiples of GDP, it is unlikely governments will return to higher interest rates in order to be able to service their massive debts. As a result, individuals and institutional investors alike are desperately seeking alternative safe investment opportunities to generate returns. The appeal of peer-to-peer lending has surged as it allows investors to chase higher yields while mitigating their risk profiles.   
