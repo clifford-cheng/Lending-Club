@@ -67,6 +67,16 @@ I utilized Google Colab for the running of the models as I had Colab Pro. Howeve
 
 The data was split into each separate loan grade category with their corresponding loan success rate and payout rates:
 
+| Grade        | Success Rates           | Interest Rates  |
+| ------------- |:-------------:| -----:|
+| A | 93.73%    |     7.07%  |
+| B | 86.76%    |    10.64%  |
+| C | 78.01%    |    14.07%  |
+| D | 70.20%    |    17.99%  |
+| E | 62.90%    |    21.63%  |
+| F | 56.02%    |    25.41%  |
+| G | 51.21%    |    28.21%  |
+
 A: 93.73% | 7.07%
 B: 86.76% | 10.64%
 C: 78.01% | 14.07%
