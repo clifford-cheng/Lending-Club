@@ -18,7 +18,7 @@
 ## Description
 
 <p align="center">
-<img src="images/5yrbond.png" width="350" height="350">
+<img src="images/5yrbond.png" width="350" height="450">
 <p/>
 
 Over the past 20 years interest rates have fallen precipitously with the 5 year US treasury yield currently at 0.29%. With debt obligations projected to reach many multiples of GDP, it is unlikely governments will return to higher interest rates in order to be able to service their massive debts. As a result, individuals and institutional investors alike are desperately seeking alternative safe investment opportunities to generate returns. The appeal of peer-to-peer lending has surged as it allows investors to chase higher yields while mitigating their risk profiles.   
@@ -81,10 +81,6 @@ Each loan grade was split into a trade and test set. The training set consisted 
 
 Three models were tested on each of the loan grades: Logistic Regression, Gradient Boosting Classifier, and XGBoost. Gridsearch was performaced in order to find the optimal parameters but despite having a slightly lower overall f1 score (.70 vs .74), Gradient Boosting Classifer had the highest returns (3.795% vs 2.629% for A rated loans). This is significantly better than the overall return of 2.490% if you purchased all the A rated loans in a portfolio. A dummy model was used to test returns but achieved a very similar return profile as simply purchasing the entirety of graded loans. The returns comparisons for all the rated loans are below:
 
-<p align="center">
-<img src="images/no_nmf_returns.png" width="400" height="400">
-<p/>
-
 | Grade        | All Loans          | Model Predicted Loans  |
 | ------------- |:-------------:| -----:|
 | A |  2.49%    |    3.80%    |
@@ -107,6 +103,7 @@ I wanted to see if there were other ideas in order to improve returns. I origina
 
 I used the unsupervised machine learning technique called NMF (non-matrix factorization) to have the algorhythm group the 400,000+ unique Job Title text data into 35 categories. By listing the top 10 words in each group I could see the industry of the future cashflows the loan was ultimately betting on. For example, the previous the model would see a B rated loan with a 740 FICO score originating from California. Using NMF, the model can now consider the same B rated loan with a 740 FICO score but that the borrower was a mid-level attorney from California. Essentially the question of loan success can now be rearranged into a question of how confident the investor believes the mid-level job security of the law industry in California will be during the time period of the loan. In fact, when analyizing the loans from B-C rated borrowers in the law industry I noticed their defaults were significantly lower than their risk-grade's average. One could opine that, in effect, a C rated loan with cashflows dependent on the law industry actually has the risk profile more in line with a B rated loan but still pays out significantly more. 
 
+[Click to View Full Image]
 <p align="center">
 <img src="images/nmf.png" width="400" height="400">
 <p/>
@@ -135,10 +132,6 @@ The new model returns of A and B rated loans increased by 1% and 10% respectivel
 ## Model Returns and Capital Capacity
 
 In summary, by using NMF and other techniques the returns of each graded loan (besides F rated loans) improved significantly. What is important is that even though the model using the NMF technique rejects more loans to achieve higher returns, the total investment capacity remains relatively high. This implies that the model can be used for large institutions in order to generate significant returns for their investors:
-
-<p align="center">
-<img src="images/nmf_returns.png" width="400" height="400">
-<p/>
 
 2017-2018
 
