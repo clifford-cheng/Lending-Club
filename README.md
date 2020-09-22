@@ -160,7 +160,7 @@ Predicted Model (no NMF)
 
 
 Predicted Model (w/ NMF)
-| Grade        | Capital Needed to Purchase All Predicted Loans          | Returns  |  
+| Grade        | Capital Needed to Purchase Model Predicted Loans (w/ NMF)         | Returns  |  
 | ------------- |:-------------:| -----:| 
 | A |  $1,113,533,675  |    3.89%  | 
 | B |  $1,231,850,700  |    3.73%  | 
