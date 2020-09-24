@@ -96,10 +96,10 @@ I wanted to see if there were other ideas in order to improve returns. I origina
 
 [How much borrowers paid before defaulting A B C D ] 
 <p align="center">
-<img src="images/Adefault.png" width="350" height="350">
-<img src="images/Bdefault.png" width="350" height="350">
-<img src="images/Cdefault.png" width="350" height="350">
-<img src="images/Ddefault.png" width="350" height="350">
+<img src="images/Apayout.png" width="350" height="350">
+<img src="images/Bpayout.png" width="350" height="350">
+<img src="images/Cpayout.png" width="350" height="350">
+<img src="images/Dpayout.png" width="350" height="350">
 <p/>
 
 I used the unsupervised machine learning technique called NMF (non-matrix factorization) to have the algorhythm group the 400,000+ unique Job Title text data into 35 categories. By listing the top 10 words in each group I could see the industry of the future cashflows the loan was ultimately betting on. For example, the previous the model would see a B rated loan with a 740 FICO score originating from California. Using NMF, the model can now consider the same B rated loan with a 740 FICO score but that the borrower was a mid-level attorney from California. Essentially the question of loan success can now be rearranged into a question of how confident the investor believes the mid-level job security of the law industry in California will be during the time period of the loan. In fact, when analyizing the loans from B-C rated borrowers in the law industry I noticed their defaults were significantly lower than their risk-grade's average. One could opine that, in effect, a C rated loan with cashflows dependent on the law industry actually has the risk profile more in line with a B rated loan but still pays out significantly more. 
