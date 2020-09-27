@@ -1,6 +1,6 @@
 # Lending-Club
 
-![](images/lendingclub2.png)
+![](images/lendingclubpic.png)
 
 > Project Goals:
 - Create a loan success and default prediction model. 
